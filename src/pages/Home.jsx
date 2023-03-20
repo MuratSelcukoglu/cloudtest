@@ -12,7 +12,7 @@ import CreateuserModal from "../components/CreateuserModal";
 import { Link } from "react-router-dom";
 import { history } from "../components/History";
 import { userLogout } from "../redux/loginSlice";
-import Paginate from '../components/Paginate';
+import Paginate from "../components/Paginate";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -26,7 +26,6 @@ const Home = () => {
   const { userList, isLoading } = useSelector((state) => state.userList);
   const [currentPage, setCurrentPage] = useState(1);
 
-  console.log(user)
 
   useEffect(() => {
     window.scrollTo(0, 0);

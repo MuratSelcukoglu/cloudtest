@@ -7,12 +7,10 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogin } from "../redux/loginSlice";
-import { useNavigate } from "react-router-dom";
 import { history } from "../components/History";
 import Header from "../components/Header";
 
 const Login = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [login, setLogin] = useState({
@@ -25,7 +23,7 @@ const Login = () => {
 
   const loginSubmit = (e) => {
     e.preventDefault();
-    dispatch(userLogin(login, navigate));
+    dispatch(userLogin(login));
   };
 
   useEffect(() => {
