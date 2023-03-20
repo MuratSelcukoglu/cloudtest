@@ -17,10 +17,12 @@ console.log(token.user)
     e.preventDefault();
     dispatch(getCreate(userInfo))
       .then((result) => {
-        console.log(result)
-        // if (result.payload[0].field === "email") {
-        //   alert("Email "+result.payload[0].message);
-        // }
+        
+        if (result.payload[0].field === "email") {
+          alert("Email "+result.payload[0].message);
+        }else {
+          console.log(result)
+        }
       })
       .catch((error) => console.log(error));
     setRefresh(true);
