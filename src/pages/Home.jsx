@@ -26,6 +26,8 @@ const Home = () => {
   const { userList, isLoading } = useSelector((state) => state.userList);
   const [currentPage, setCurrentPage] = useState(1);
 
+  console.log(user)
+
   useEffect(() => {
     window.scrollTo(0, 0);
     dispatch(getUsers(user));

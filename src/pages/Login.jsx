@@ -52,7 +52,7 @@ const Login = () => {
     <>
       <Header />
       <section className="vh-50 gradient-custom">
-        <div className="container py-5 h-50">
+        <div className="container py-2 h-50">
           <div className="row d-flex justify-content-center align-items-center h-50">
             <div className="col-12 col-md-8 col-lg-6 col-xl-5">
               <form onSubmit={loginSubmit}>

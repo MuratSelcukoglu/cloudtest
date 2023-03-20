@@ -12,14 +12,15 @@ const CreateuserModal = ({ token, setRefresh, setCreateopen, createOpen }) => {
     status: "",
     gender: "",
   });
-
+console.log(token.user)
   const createSubmit = (e) => {
     e.preventDefault();
     dispatch(getCreate(userInfo))
       .then((result) => {
-        if (result.payload[0].field === "email") {
-          alert("Email "+result.payload[0].message);
-        }
+        console.log(result)
+        // if (result.payload[0].field === "email") {
+        //   alert("Email "+result.payload[0].message);
+        // }
       })
       .catch((error) => console.log(error));
     setRefresh(true);

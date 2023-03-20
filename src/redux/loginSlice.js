@@ -10,7 +10,7 @@ export const userLogin = createAsyncThunk("auth/login", async (data) => {
           const token =
             "Bearer eb8b028dd80d661a81e88190a388752f45a943fa4ed55d88cf92035d1bd1222c";
           localStorage.setItem("token", token);
-          resolve({ user: token });
+          resolve(token);
         }
       } catch (error) {
         console.log(" user login " + error);
